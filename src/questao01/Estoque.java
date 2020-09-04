@@ -17,15 +17,14 @@ public class Estoque {
 	public void mudarQtdMinima(int qtdMinima) {
 		this.qtdMinima = qtdMinima;
 	}
-
-	public Produto getProduto() {
-		return produto;
-	}
-
 	public void reporEstoque(int qtd) {
 		qtdAtual += qtd;
 	}
 
+	public Produto getProduto() {
+		return produto;
+	}
+	
 	public void darBaixa(int qtd) {
 		if (qtdAtual - qtd >= qtdMinima) {
 			qtdAtual -= qtd;
@@ -48,7 +47,7 @@ public class Estoque {
 
 	public String relatorio() {
 		return "Estoque: Produto = " + produto.getNome() + ", Quantidade Atual = " + qtdAtual + ", Quantidade Mínima = "
-				+ qtdMinima + "";
+				+ qtdMinima;
 	}
 
 }
